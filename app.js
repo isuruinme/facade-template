@@ -1,4 +1,3 @@
-const createError = require('http-errors');
 const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
@@ -19,6 +18,10 @@ app.use('/', indexRouter);
 app.use('/external', externalRouter)
 
 
-// error handler
+const port = process.env.SERVER_PORT || 3000;
+const server = process.env.SERVER_NAME || 'Facade-Template';
 
-module.exports = app;
+app.listen(+port, () => {
+    console.log(`${server} started with port:${port}`);
+});
+
