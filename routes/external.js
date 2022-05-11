@@ -1,5 +1,5 @@
 const express = require('express');
-const {newPaymentRequest} = require("../src/paymentRequest.controller");
+const {newPaymentRequest} = require("../src/controller/paymentRequest.controller");
 const {AuthenticateFacade} = require("../src/facade/Authenticate.facade");
 const router = express.Router();
 router.post('/outbound/:organization', (req, res, next)=>{

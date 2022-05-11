@@ -1,4 +1,4 @@
-const {PaymentRequestInterface} = require("./interfaces/PaymentRequest.interface");
+const {PaymentRequestInterface} = require("../interfaces/PaymentRequest.interface");
 const newPaymentRequest = async (req, res, next) => {
     try {
         const paymentBuilderInterface = new PaymentRequestInterface(req.params.organization, req.body);
